@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# FIXME (ksgaipal): follow up with counsel on github or fix this script
+exec find "$@"
+echo "FIXME (ksgaipal): short circuiting until counsel-file-jump fixes in emacs"
+exit
+
+# wrapper script for find program
+
+if [ $# -lt 1 ]; then
+    echo "Usage: $(basename $0) PATTERN"
+    exit 1
+fi
+
+. $(dirname $0)/util.inc
+
+PATTERN_EXCLUDE_FILE=$HOME/code/.ignore
+EXCLUDED_FILE_ARGS=$(parse_folder_names \
+                         "-path ./" \
+                         $PATTERN_EXCLUDE_FILE \
+                         " -o")
+DIR=""
+if [[ $# -gt 1 ]]; then
+    DIR=$1
+    shift 1
+fi
+
+# Note: to make it work in emacs byte-compile /usr/share/emacs/24.5/lisp/find-dired.el.gz
+# after changing function definition of find-dired()
+# 1. appending dummy "-name ''" for last pattern string to work correctly
+# 2. appending fake '-printf ""' to make emacs output sane and also not printing pruned dirs
+#   -- doesnt work in the normal terminal usage, so disabling this for now
+exec find $DIR \
+     \( $EXCLUDED_FILE_ARGS -iname '' \) -prune -o \
+     "$@"
+

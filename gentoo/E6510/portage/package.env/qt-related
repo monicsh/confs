@@ -1,0 +1,3 @@
+dev-qt/qthelp enable-doc
+dev-qt/qt-creator enable-doc
+x11-themes/qtcurve disable-multilib-strict

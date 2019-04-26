@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# opens the file in emacsclient for editing;
+# input can be a line from searched result of grepk command.
+
+if [ $# -lt 1 ]; then
+    echo "Opens a file in emacs at a give line number (if any)."
+    echo -e "Usage: \n\t$(basename $0) FILENAME[:LINENUM[:anygarbagevalue]]"
+    exit 1
+fi
+
+filename=$(echo $1 | cut -f1 -d ':')
+linenum=$(echo $1 | cut -f2 -d ':' -s)
+shift 1
+
+echo -n "Opening '$filename' at line #$linenum... "
+
+if [ -z $filename ]; then
+    echo -e "Failed!\n** Filename cannot be extracted from given arguments"
+    exit 1
+fi
+
+if ! [[ $linenum =~ ^[0-9]+$ ]] ; then
+    echo -n "(cannot parse line #, defaulting 0) "
+    linenum=0
+fi
+
+emacsclient -n +$linenum $filename
+echo "done."

@@ -1,0 +1,12 @@
+# required by app-emulation/virtualbox-4.2.18[extensions]
+>=app-emulation/virtualbox-extpack-oracle-4.2.18 PUEL
+
+# required by www-plugins/adobe-flash (argument)
+>=www-plugins/adobe-flash-11.2.202.411 AdobeFlash-11.x
+
+# required by www-plugins/google-talkplugin (argument)
+=www-plugins/google-talkplugin-5.4.2.0 Google-TOS
+
+# required by dev-java/oracle-jdk-bin (argument)
+=dev-java/oracle-jdk-bin-1.7.0.71 Oracle-BCLA-JavaSE
+

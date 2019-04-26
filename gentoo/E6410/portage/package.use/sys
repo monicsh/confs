@@ -1,0 +1,10 @@
+# 1. default flag 'fortran' is needed only for dev-lang/R and sci-mathematics/rstudio.
+# remove it (-fortran) when dependencies are resolved
+# 2. 'gcj' flag is needed to install pdftk
+sys-devel/gcc fortran mudflap graphite gcj
+
+sys-apps/gnome-disk-utility fat
+sys-libs/zlib minizip
+sys-fs/ntfs3g xattr
+sys-block/gparted ntfs fat
+

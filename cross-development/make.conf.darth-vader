@@ -1,0 +1,44 @@
+# These settings were set by the catalyst build script that automatically
+# built this stage.
+# Please consult /usr/share/portage/config/make.conf.example for a more
+# detailed example.
+# Compile specific options
+CFLAGS="-march=atom -Os -pipe"
+CXXFLAGS="${CFLAGS}"
+MAKEOPTS="-j2"
+
+# add "nostrip" and "installsources" in FEATURES if you need emerge to prepare a debug
+# package with lots of debugging symbols (you can also add -ggdb3 in CFLAGS for more info)
+FEATURES="multilib-strict strict unknown-features-warn userfetch userpriv usersync nodoc noinfo noman"
+
+# WARNING: Changing your CHOST is not something that should be done lightly.
+# Please consult http://www.gentoo.org/doc/en/change-chost.xml before changing.
+CHOST="x86_64-pc-linux-gnu"
+
+# These are the USE flags that were used in addition to what is provided by the
+# profile used for building.
+USE="-kde -qt3support"
+CPU_FLAGS_X86="mmx mmxext sse sse2 sse3 ssse3"
+LINGUAS="en_US en hi"
+
+# Any available mirror
+SYNC="rsync://rsync.us.gentoo.org/gentoo-portage"
+
+# X11 settings
+INPUT_DEVICES="evdev synaptics"
+VIDEO_CARDS="intel i915"
+
+# emerge specific options
+EMERGE_DEFAULT_OPTS="--ask-enter-invalid --quiet-build --quiet-fail"
+
+# Portage file storage options to save disk space in /
+PORTAGE_DIR=/home/portage
+DISTDIR=${PORTAGE_DIR}/localrepo
+PKGDIR=${PORTAGE_DIR}/packages
+PORTAGE_TMPDIR=${PORTAGE_DIR}/tmpdir
+
+# 2 remote hosts with 4 cores each = 8 cores remote
+# 1 local host with 2 cores = 2 cores local
+# total number of cores is 10, so N = 2*10+1 and M=2.
+MAKEOPTS="-j21 -l2"
+FEATURES="${FEATURES} distcc distcc-pump"

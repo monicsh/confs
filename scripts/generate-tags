@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [ $# -lt 1 ]; then
+    echo "Usage: generate-tags SOURCE_DIR"
+    echo "Notice: Prefere to use cscope program instead of etags."
+    exit 1
+fi
+
+TARGET_DIR=$(readlink -f $1)
+shift
+
+pushd $TARGET_DIR > /dev/null
+TAGFILE=$TARGET_DIR"/TAGS"
+
+if [ -f $TAGFILE ]; then
+    echo -n "Found existing tag file '$TAGFILE'... "
+    rm $TAGFILE
+    echo "removed."
+fi
+
+echo -n "Creating tag file: '$TAGFILE'... "
+
+find $TARGET_DIR -readable -type f \( -name "*.c*" -o -name "*.h" \) -print \
+    | etags --append --declarations --ignore-indentation --members --language=c --language=c++ -
+
+echo "done."
+popd > /dev/null

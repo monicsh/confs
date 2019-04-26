@@ -1,0 +1,2 @@
+# USE="enable-info" for docs in emacs for certain packages
+app-editors/emacs enable-info

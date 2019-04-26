@@ -1,0 +1,2 @@
+# USE="abi_x86_32" for androidev
+sys-libs/zlib abi_x86_32

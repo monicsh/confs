@@ -1,0 +1,53 @@
+[user]
+	name = Kshitij Gaipal
+	email = ksgaipal@microsoft.com
+[core]
+	# editor = emacsclient
+	excludesfile = ~/.gitignore_global
+	whitespace = trailing-space
+	fscache = true
+	preloadindex = true
+[alias]
+	co = checkout
+	last = log -1 HEAD
+	unstage = reset HEAD --
+
+        # prune local and remote branches
+        # https://stackoverflow.com/a/3670560
+        pruneall = "!git branch --color=never | cut -c3- | egrep -v '(dev|develop|master)'|xargs git branch -D ; git remote prune origin"
+
+	# https://www.georgebrock.com/blog/useful-git-aliases/
+	graph = log --no-color --all --graph --decorate --oneline -n30
+[push]
+	default = simple
+[color]
+	branch = always
+	grep = always
+	status = always
+[grep]
+	lineNumber = true
+[log]
+	follow = true
+	decorate = true
+[credential]
+	modalPrompt = false
+	writeLog = false
+[credential "https://kgaipal.visualstudio.com/"]
+	helper = store
+[credential "microsoft.visualstudio.com"]
+	helper = manager
+	interactive = never
+	authority = AAD
+	validate = false
+[credential "https://github.com/"]
+	helper = store
+[gc]
+	auto = 256
+
+# for boosting performance on windows especially for magit
+# https://magit.vc/manual/magit/Microsoft-Windows-Performance.html#Microsoft-Windows-Performance
+# git config --global core.preloadindex true   # default since v2.1
+# git config --global core.fscache true        # default since v2.8
+# git config --global gc.auto 256
+[winUpdater]
+	recentlySeenVersion = 2.21.0.windows.1

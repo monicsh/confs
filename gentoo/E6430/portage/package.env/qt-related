@@ -1,0 +1,6 @@
+# USE="enable-doc" needed for qt-creator and related packages
+dev-qt/qt-creator enable-doc
+dev-qt/qthelp enable-doc
+
+# USE="disable-multilib-strict" for not forcing FEATURES="multilib-strict"
+x11-themes/qtcurve disable-multilib-strict

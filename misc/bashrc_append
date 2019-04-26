@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# colors
+NORMAL="\[\033[00m\]"
+  BOLD="\[\033[01m\]"
+   RED="\[\033[31m\]"
+ GREEN="\[\033[32m\]"
+  GREY="\[\033[37m\]"
+
+# use platform dependent separators
+PLATFORM=$(cat /proc/version | cut -d ' ' -f1)
+
+if [[ "$PLATFORM" =~ ^MINGW* ]]; then
+    export PATH=$HOME/.local/bin:/c/Program\ Files/Git/bin:$PATH
+fi
+
+# change prompt
+PS1="[$GREY\W$NORMAL]\$ "
+
+# open new gnome-terminal in same working directory as in previous terminal
+if [ -f /etc/profile.d/vte.sh ]; then
+    . /etc/profile.d/vte.sh
+fi

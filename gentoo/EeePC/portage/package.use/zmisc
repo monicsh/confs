@@ -1,0 +1,26 @@
+# Desired functionality in packages
+sys-apps/gnome-disk-utility fat
+
+# required by media-video/mplayer2-2.0_p20131009
+# required by mplayer2 (argument)
+=media-video/libav-9.17 threads
+# required by media-libs/cogl-1.18.2-r1[gles2]
+# required by x11-wm/mutter-3.14.3
+# required by gnome-base/gnome-shell-3.14.3
+# required by gnome-extra/gnome-tweak-tool-3.14.2
+# required by @selected
+# required by @world (argument)
+=media-libs/mesa-10.3.7-r1 gles2
+# required by x11-wm/mutter-3.14.3[kms]
+# required by gnome-base/gnome-shell-3.14.3
+# required by gnome-extra/gnome-tweak-tool-3.14.2
+# required by @selected
+# required by @world (argument)
+>=media-libs/clutter-1.20.0 egl
+# required by media-libs/clutter-1.20.0[egl]
+# required by x11-wm/mutter-3.14.3[kms]
+# required by gnome-base/gnome-shell-3.14.3
+# required by gnome-extra/gnome-tweak-tool-3.14.2
+# required by @selected
+# required by @world (argument)
+>=media-libs/cogl-1.18.2-r1 gles2

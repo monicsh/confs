@@ -1,0 +1,11 @@
+# Qt libs specific
+dev-qt/* pch webkit postgres icu gtkstyle
+
+# Qt based projects
+dev-qt/qt-creator subversion valgrind doc
+dev-qt/qthelp doc
+
+# required by dev-qt/qt-creator-2.8.1
+# required by @selected
+# required by @world (argument)
+=dev-libs/botan-1.10.5 threads

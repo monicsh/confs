@@ -1,0 +1,20 @@
+# Necessary packages and their flags I need
+#
+
+##################################################################
+# Others to satisfy portage @world, will remove later ... may be?
+##################################################################
+
+# USE="networkmanager" until this becomes part of profile
+>=gnome-base/gnome-control-center-3.8.3 networkmanager
+
+# required by net-libs/webkit-gtk-2.18.2::gentoo[gstreamer]
+# required by net-libs/gnome-online-accounts-3.22.5::gentoo
+# required by dev-libs/libgdata-0.17.8::gentoo[gnome-online-accounts]
+# required by media-plugins/grilo-plugins-0.3.4::gentoo
+# required by media-video/totem-3.22.1-r1::gentoo
+# required by @selected
+# required by @world (argument)
+>=media-libs/gst-plugins-bad-1.10.5 egl
+media-plugins/gst-plugins-meta ffmpeg
+

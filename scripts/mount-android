@@ -1,0 +1,60 @@
+#!/bin/sh
+# This script searches for input file in $HOME/mount-dirs-rc
+# rc file format should be as below:
+# device-key:device-type:path-to-mount-at
+#
+# example-
+# android:mtp:/home/foo/AndroidDevice
+#
+
+function validate {
+    ACTION=$1
+    shift 1
+
+    if [[ !(${ACTION} == "mount" || ${ACTION} == "unmount" || ${ACTION} == "umount") ]]; then
+        echo "invalid arguments"
+        return 0
+    else
+        return 1
+    fi
+}
+
+function help {
+    echo "Usage: "
+    echo -e "\t$0 mount|u[n]mount\n"
+}
+
+function read_mount_confs {
+    local KEY=$1
+    local RECORD=`egrep "^${KEY}" ${HOME}/.mount-dirs-rc`
+    if [ ! -z $RECORD ]; then
+        echo $(echo $RECORD|cut -d ':' -f 3)
+    fi
+}
+
+function do_android {
+
+    # from http://wiki.gentoo.org/wiki/MTP#Go-mtpfs
+    # http://wiki.gentoo.org/wiki/MTP#simple-mtpfs
+
+    if [ $ACTION == "mount" ]; then
+        ( mkdir -pv ${MOUNT_DIR} \
+                && simple-mtpfs ${MOUNT_DIR} \
+                && echo "mounted at ${MOUNT_DIR}" ) \
+            || echo "failed"
+    else
+        ( fusermount -u ${MOUNT_DIR} \
+                && rmdir -v ${MOUNT_DIR} && echo "unmounted" ) \
+            || echo "failed"
+    fi
+}
+
+validate $*
+if [[ $? -eq 0 ]]; then
+    help
+    exit 1
+fi
+
+MOUNT_DIR=$(read_mount_confs "android")
+
+do_android

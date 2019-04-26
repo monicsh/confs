@@ -1,0 +1,31 @@
+#!/bin/bash
+
+if [ $# -ne 3 ]; then
+	echo "Usage: svn-change-log REV LOGMSG PATH"
+	exit 1
+fi
+
+REV=$1
+LOG=$2
+TARGET_DIR=`readlink -f $3`
+
+pushd $TARGET_DIR > /dev/null
+echo "***"
+echo $LOG
+echo "***"
+echo
+echo "Note: '*' will not included in final log"
+
+while true; do
+    read -p "Set above log for $REV [y/N]? " yn
+    case $yn in
+	[Yy]* ) svn propset -r $REV --revprop svn:log "$LOG" $TARGET_DIR;
+		echo "done."
+		break;;
+
+	* ) echo "cancelled."
+		break;;
+    esac
+done
+
+popd > /dev/null

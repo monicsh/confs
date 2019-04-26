@@ -1,0 +1,6 @@
+app-doc/doxygen dot
+
+# required by media-gfx/graphviz-2.26.3-r4::gentoo
+# required by app-doc/doxygen-1.8.9.1::gentoo[dot]
+# required by doxygen (argument)
+>=media-libs/gd-2.0.35-r4 fontconfig

@@ -1,0 +1,13 @@
+#
+# Necessary packages and their flags I need
+#
+media-gfx/gimp jpeg2k postscript smp
+
+#
+# Others to satisfy portage @world, will remove later ... may be?
+#
+
+# required by gnome-base/gnome-shell-3.16.4::gentoo
+# required by gnome-base/gdm-3.18.2::gentoo
+>=gnome-base/gnome-control-center-3.18.2 networkmanager
+

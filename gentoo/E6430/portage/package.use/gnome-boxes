@@ -1,0 +1,10 @@
+# required by gnome-extra/gnome-boxes-3.22.4::gentoo
+# required by gnome-extra/gnome-boxes (argument)
+>=app-emulation/qemu-2.9.0-r2 smartcard spice usbredir
+# required by gnome-extra/gnome-boxes-3.22.4::gentoo
+# required by gnome-extra/gnome-boxes (argument)
+>=app-emulation/spice-0.13.3-r2 smartcard
+# required by gnome-extra/gnome-boxes-3.22.4::gentoo
+# required by gnome-extra/gnome-boxes (argument)
+>=net-misc/spice-gtk-0.33-r2 smartcard usbredir
+

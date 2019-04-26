@@ -1,0 +1,5 @@
+# required by adobe-flash
+>=www-plugins/adobe-flash-11.2.202.291-r1 AdobeFlash-11.x
+
+# required by app-emulation/virtualbox-4.2.18[extensions]
+>=app-emulation/virtualbox-extpack-oracle-4.2.18 PUEL

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# wrapper script to find and replace in all files
+if [ $# -lt 2 ]; then
+    echo "Usage: $(basename $0) SEARCH REPLACEMENT"
+    exit 1
+fi
+
+SEARCH=$1
+REPLACEMENT=$2
+
+SED_CMD=s/$SEARCH/$REPLACEMENT/g
+
+exec grepk -rl --color=never "$SEARCH" | xargs sed -i "$SED_CMD"

@@ -1,0 +1,13 @@
+*Test*
+*.xml
+*.XML
+Debug
+Release
+*.txt
+*.sln
+*.*proj
+*.dll
+*.min.*
+*.tm4
+*.FxCop
+*.xsd

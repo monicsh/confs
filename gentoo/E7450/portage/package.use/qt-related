@@ -1,0 +1,19 @@
+# Qt libs specific
+dev-qt/* pch webkit postgres icu gtkstyle
+
+# Qt based projects
+dev-qt/qt-creator subversion valgrind
+# TODO: enable doc for qt-creator when emerge stops failing for docs on qt5
+dev-qt/qthelp doc
+
+# required by dev-qt/qt-creator-3.4.2::gentoo
+# required by @selected
+# required by @world (argument)
+=dev-libs/botan-1.10.12 threads
+
+# required by dev-qt/qtcore-5.4.2::gentoo
+# required by dev-qt/linguist-tools-5.4.2::gentoo
+# required by dev-qt/qt-creator-3.4.2::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libpcre-8.36 pcre16

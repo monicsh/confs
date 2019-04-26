@@ -1,0 +1,21 @@
+
+# USE="vnc" is optional; very useful to connect multiple VMs through a
+# vnc client and all machines show in tabs
+# USE="extensions" required for USB 3.0 support in a VM
+>=app-emulation/virtualbox-5.0 -sdk vboxwebsrv vnc
+# * Starting with version 4.0.0, virtualbox has USB-1 support.
+ # * For USB-2 support, PXE-boot ability and VRDP support please emerge
+ # *   app-emulation/virtualbox-extpack-oracle
+ # * package.
+ # * Starting with version 5.0.0, virtualbox no longer has the "additions" and
+ # * the "extension" USE flag. For installation of the guest additions ISO
+ # * image, please emerge
+ # *   app-emulation/virtualbox-additions
+ # * and for the USB2, USB3, VRDP and PXE boot ROM modules, please emerge
+ # *   app-emulation/virtualbox-extpack-oracle
+
+# required by dev-qt/qtcore-5.5.1-r1::gentoo
+# required by dev-qt/qtprintsupport-5.5.1::gentoo
+# required by app-emulation/virtualbox-5.1.0::gentoo[-headless,qt5]
+# required by virtualbox (argument)
+>=dev-libs/libpcre-8.38-r1 pcre16

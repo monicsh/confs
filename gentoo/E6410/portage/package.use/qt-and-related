@@ -1,0 +1,2 @@
+# Qt libs specific
+dev-qt/* pch webkit postgres gtkstyle icu

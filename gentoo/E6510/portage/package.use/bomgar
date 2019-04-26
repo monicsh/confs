@@ -1,0 +1,4 @@
+# Bomgar specific builds
+x11-libs/libXScrnSaver static-libs
+x11-libs/libXfixes static-libs
+x11-libs/libXdamage static-libs

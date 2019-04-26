@@ -1,0 +1,2 @@
+dev-lang/R enable-doc
+dev-lang/ghc no-tmpfs

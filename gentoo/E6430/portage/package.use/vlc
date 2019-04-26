@@ -1,0 +1,4 @@
+# required by media-video/vlc-2.2.4-r1::gentoo
+# required by media-video/vlc (argument)
+>=sys-libs/zlib-1.2.11 minizip
+

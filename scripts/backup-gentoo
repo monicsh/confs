@@ -1,0 +1,50 @@
+#!/bin/sh
+
+function usage
+{
+    echo "Usage:"
+    echo -e "\t$ ./$(basename $0) "
+    echo -en "\n\tBackup pre-selected configuration files in "
+    echo -e "\n\t{/etc/portage, /var/lib/portage/, /usr/src/} into '$HOME/'"
+}
+
+function validate
+{
+    if [ "$1" == "--help" ]; then
+	return 1
+    fi
+
+    # all ok
+    BACKUP_DIR=${HOME}/$(date +gentoo-%Y-%m-%d-%T)/
+    return 0
+}
+
+function backup
+{
+    echo -n "Backup dir '$BACKUP_DIR'... "
+    mkdir -p $BACKUP_DIR/{portage,kernel,etc}
+
+    # etc
+    cp -arp /etc/default/grub ${BACKUP_DIR}/etc/
+    cp -arp /etc/fstab ${BACKUP_DIR}/etc/
+    cp -arp /etc/systemd/journald.conf ${BACKUP_DIR}/etc/
+
+    # portage
+    cp -arp /etc/portage/package.* ${BACKUP_DIR}portage/
+    cp -arp /etc/portage/env ${BACKUP_DIR}portage/
+    cp -arp /etc/portage/*.conf ${BACKUP_DIR}portage/
+    cp -arp /var/lib/portage/world ${BACKUP_DIR}portage/
+
+    # kernel
+    zcat /proc/config.gz > ${BACKUP_DIR}kernel/kernel-$(uname -r).config
+
+    echo "done"
+}
+
+validate $*
+if [ $? -ne 0 ]; then
+    usage
+    exit 1
+fi
+
+backup

@@ -1,0 +1,34 @@
+# lines marked with '#' are comments
+
+# files
+*.csproj
+*.css
+*.log
+*.map
+*.min.css
+*.min.js
+*.scons
+*.sln
+*.svg
+*ChangeLog*
+AgentWebEvents_types.cs
+AgentWeb_types.cso
+Makefile
+SConstruct
+TAGS
+_Chutzpah*
+app.d.ts
+jsll.js
+templates.html.js
+
+# directories
+.output/
+.svn/
+.git/
+Debug/
+Release/
+dist/
+node_modules/
+
+# same directores above but relative paths to <ROOT/Product/Source>
+CustomerView.Web/dist/

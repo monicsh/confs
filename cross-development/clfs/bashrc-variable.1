@@ -1,0 +1,37 @@
+# aliases
+alias ll='ls -lh'
+alias la='ls -Ah'
+alias l='ls -CFh'
+alias tree='tree -C '
+alias b='cd ..'
+
+set +h
+umask 022
+
+export CLFS_HOST="x86_64-pc-linux-gnu"
+export CLFS_TARGET="x86_64-unknown-linux-gnu"
+export CLFS_CPU="atom"
+export CLFS_ARCH="x86_64"
+
+CLFS="/usr/${CLFS_TARGET}"
+LC_ALL=POSIX
+PATH=${CLFS}/bin:/bin:/usr/bin
+export CLFS LC_ALL PATH
+unset CFLAGS
+
+export CC="x86_64-unknown-linux-gnu-gcc"
+export CXX="x86_64-unknown-linux-gnu-g++"
+export AR="x86_64-unknown-linux-gnu-ar"
+export AS="x86_64-unknown-linux-gnu-as"
+export LD="x86_64-unknown-linux-gnu-ld"
+export RANLIB="x86_64-unknown-linux-gnu-ranlib"
+export READELF="x86_64-unknown-linux-gnu-readelf"
+export STRIP="x86_64-unknown-linux-gnu-strip"
+export CC="x86_64-unknown-linux-gnu-gcc"
+export CXX="x86_64-unknown-linux-gnu-g++"
+export AR="x86_64-unknown-linux-gnu-ar"
+export AS="x86_64-unknown-linux-gnu-as"
+export LD="x86_64-unknown-linux-gnu-ld"
+export RANLIB="x86_64-unknown-linux-gnu-ranlib"
+export READELF="x86_64-unknown-linux-gnu-readelf"
+export STRIP="x86_64-unknown-linux-gnu-strip"

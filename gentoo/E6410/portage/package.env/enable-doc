@@ -1,0 +1,2 @@
+# include docs for R so that rstudio doesnt complain: "R doc dir (/usr/share/doc/R-x.y.z) not found"
+dev-lang/R enable-doc

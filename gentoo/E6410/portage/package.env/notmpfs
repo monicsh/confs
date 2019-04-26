@@ -1,0 +1,11 @@
+# exclude these heavy packages (> 2G) from tmpfs
+# [http://wiki.gentoo.org/wiki/Portage_TMPDIR_on_tmpfs]
+
+app-office/libreoffice notmpfs
+
+mail-client/mozilla-thunderbird notmpfs
+
+sys-devel/gcc notmpfs
+
+www-client/chromium notmpfs
+www-client/firefox notmpfs

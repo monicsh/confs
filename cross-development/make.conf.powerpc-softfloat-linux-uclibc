@@ -1,0 +1,37 @@
+# edited as per instructions at http://www.gentoo.org/proj/en/base/embedded/cross-development.xml
+
+CHOST=powerpc-softfloat-linux-uclibc
+CBUILD=x86_64-pc-linux-gnu
+ARCH=ppc
+
+HOSTCC=x86_64-pc-linux-gnu-gcc
+
+ROOT=/usr/${CHOST}/
+
+ACCEPT_KEYWORDS="ppc"
+
+USE="${ARCH} symlink"
+
+CFLAGS="-Os -pipe"
+CXXFLAGS="${CFLAGS}"
+
+# emerge specific options
+EMERGE_DEFAULT_OPTS="--ask-enter-invalid --quiet-build --quiet-fail"
+PORTAGE_RSYNC_EXTRA_OPTS="--exclude-from=/etc/portage/rsync_excludes"
+
+FEATURES="-collision-protect sandbox buildpkg noman noinfo nodoc unknown-features-warn userfetch userpriv usersync "
+
+# Be sure we dont overwrite pkgs from another repo..
+PKGDIR=${ROOT}packages/
+PORTAGE_TMPDIR=${ROOT}tmp/
+
+ELIBC="uclibc"
+
+PKG_CONFIG_PATH="${ROOT}usr/lib/pkgconfig/"
+
+GENTOO_MIRRORS="http://open-systems.ufl.edu/mirrors/gentoo \
+    http://prometheus.cs.wmich.edu/gentoo \
+    http://mirror.datapipe.net/gentoo \
+    http://ftp.ucsb.edu/pub/mirrors/linux/gentoo/"
+INPUT_DEVICES="keyboard"
+MAKEOPTS="-j4"

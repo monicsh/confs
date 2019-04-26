@@ -1,0 +1,4 @@
+sys-apps/gnome-disk-utility fat
+sys-block/gparted fat hfs ntfs
+sys-devel/gcc mudflap -fortran graphite
+sys-devel/llvm clang gold

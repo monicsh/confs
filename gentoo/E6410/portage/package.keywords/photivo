@@ -1,0 +1,6 @@
+# required by media-gfx/photivo-0_pre20131115
+# required by media-gfx/photivo (argument)
+=media-libs/cimg-1.5.2 ~amd64
+# required by media-gfx/photivo (argument)
+=media-gfx/photivo-0_pre20131115 ~amd64
+

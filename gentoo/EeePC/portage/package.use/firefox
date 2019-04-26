@@ -1,0 +1,6 @@
+www-client/firefox system-icu system-cairo system-jpeg system-libvpx wifi
+
+# required by www-client/firefox-31.5.0[gstreamer]
+# required by firefox (argument)
+=media-plugins/gst-plugins-meta-1.0-r2 ffmpeg
+

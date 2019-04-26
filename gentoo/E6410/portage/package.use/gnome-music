@@ -1,0 +1,4 @@
+# required by media-sound/gnome-music-3.12.2.1
+# required by media-sound/gnome-music (argument)
+>=media-plugins/grilo-plugins-0.2.13 tracker
+

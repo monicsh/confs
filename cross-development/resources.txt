@@ -1,0 +1,7 @@
+http://www.gentoo.org/proj/en/base/embedded/handbook/index.xml?part=1&chap=3
+http://www.gentoo.org/proj/en/base/embedded/cross-development.xml
+https://wiki.gentoo.org/wiki/Overlay
+
+http://trac.clfs.org/wiki/read#ReadtheCrossLinuxFromScratchBookOnline
+https://github.com/icecc/icecream#cross-compiling-using-icecream
+http://www.compilerjobs.com/db/jobs_list.php?a=return

@@ -1,0 +1,33 @@
+#
+# Necessary packages and their flags I need
+app-admin/testdisk ntfs
+app-editors/emacs gconf gsettings sound xft gzip-el
+app-text/evince xps
+gnome-base/nautilus sendto
+media-gfx/gimp jpeg2k postscript smp xpm wmf
+gnome-base/gnome-shell networkmanager
+net-p2p/transmission -qt4  # no qt gui, gtk is enough
+
+# Others to satisfy portage @world, will remove later ... may be?
+#
+# required by media-libs/cogl-1.18.2-r1[gles2]
+# required by media-libs/clutter-1.20.0
+# required by x11-wm/mutter-3.14.3[kms]
+# required by gnome-base/gnome-shell-3.14.3
+# required by gnome-extra/gnome-tweak-tool-3.14.2
+# required by @selected
+# required by @world (argument)
+=media-libs/mesa-10.3.7-r1 gles2
+# required by x11-wm/mutter-3.14.3[kms]
+# required by gnome-base/gnome-shell-3.14.3
+# required by gnome-extra/gnome-tweak-tool-3.14.2
+# required by @selected
+# required by @world (argument)
+>=media-libs/clutter-1.20.0 egl
+# required by media-libs/clutter-1.20.0[egl]
+# required by x11-wm/mutter-3.14.3[kms]
+# required by gnome-base/gnome-shell-3.14.3
+# required by gnome-extra/gnome-tweak-tool-3.14.2
+# required by @selected
+# required by @world (argument)
+>=media-libs/cogl-1.18.2-r1 gles2

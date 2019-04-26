@@ -1,0 +1,3 @@
+# USE="rdp" for Windows VirtualBox machines
+# USE="spice" for gnome-boxes
+net-misc/vinagre rdp spice

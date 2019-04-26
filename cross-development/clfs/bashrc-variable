@@ -1,0 +1,20 @@
+set +h
+umask 022
+CLFS=/mnt/clfs
+LC_ALL=POSIX
+PATH=${CLFS}/cross-tools/bin:/bin:/usr/bin
+export CLFS LC_ALL PATH
+
+# aliases
+alias ll='ls -lh'
+alias la='ls -Ah'
+alias l='ls -CFh'
+alias tree='tree -C '
+alias b='cd ..'
+
+unset CFLAGS
+unset CXXFLAGS
+export CLFS_HOST="x86_64-cross-linux-gnu"
+export CLFS_TARGET="x86_64-unknown-linux-musl"
+export CLFS_ARCH="x86"
+export CLFS_CPU="atom"

@@ -1,0 +1,36 @@
+CHOST=x86_64-unknown-linux-gnu
+CBUILD=x86_64-pc-linux-gnu
+ARCH=amd64
+
+HOSTCC=x86_64-pc-linux-gnu-gcc
+
+ROOT=/usr/${CHOST}/
+
+ACCEPT_KEYWORDS="amd64"
+
+USE="${ARCH} -kde3 -qt3support"
+CPU_FLAGS_X86="mmx mmxext sse sse2 sse3 ssse3"
+LINGUAS="en_US en hi"
+
+CFLAGS="-Os -pipe"
+CXXFLAGS="${CFLAGS}"
+MAKEOPTS="-j4"
+
+FEATURES="-collision-protect sandbox buildpkg noman noinfo nodoc \
+  multilib-strict strict unknown-features-warn userfetch userpriv usersync"
+
+# Be sure we dont overwrite pkgs from another repo..
+PKGDIR=${ROOT}packages/
+DISTDIR=/home/portage/localrepo/
+PORTAGE_TMPDIR=/home/portage/tmpdir/
+
+ELIBC="glibc"
+
+PKG_CONFIG_PATH="${ROOT}usr/lib/pkgconfig/"
+
+# X11 settings
+INPUT_DEVICES="evdev synaptics"
+VIDEO_CARDS="intel i915"
+
+# emerge specific options
+EMERGE_DEFAULT_OPTS="--ask-enter-invalid --quiet-build --quiet-fail"

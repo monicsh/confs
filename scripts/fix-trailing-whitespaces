@@ -1,0 +1,8 @@
+#!/bin/bash
+
+exec grepk -Er "[[:space:]]+$" "$@"
+
+# exec find . -type f -name "*.cpp" | while read FILE; do cat -s $FILE > _tmp && cat _tmp > $FILE && rm _tmp; done
+# exec find . -type f -name "*.h" | while read FILE; do cat -s $FILE > _tmp && cat _tmp > $FILE && rm _tmp; done
+
+# exec bomgrep --color=never -rEl "[[:space:]]+$" "$@" | xargs sed -i 's/[[:space:]]*$//g'

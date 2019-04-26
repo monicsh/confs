@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# wrapper script for grep program
+
+if [ $# -lt 1 ]; then
+    echo "Usage: $(basename $0) PATTERN"
+    exit 1
+fi
+
+. $(dirname $0)/util.inc
+
+PATTERN_EXCLUDE_FILE=$HOME/code/.ignore
+EXCLUDED_FILE_ARGS=$(parse_folder_names \
+                         "--exclude-dir=" \
+                         $PATTERN_EXCLUDE_FILE \
+                         " ")
+
+# Note: to make it work in emacs byte-compile /usr/share/emacs/24.5/lisp/progmodes/grep.el.gz
+# after changing function definition of grep()
+exec grep -nHsI --color=always \
+     --exclude-from=$PATTERN_EXCLUDE_FILE \
+     $EXCLUDED_FILE_ARGS \
+     "$@"  \
+    | sed -r 's/[[:space:]]+/ /'

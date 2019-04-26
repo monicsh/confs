@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# base ls, all other modifications after this
+alias ls='ls --color=always'
+
+alias l='ls -CFh'
+alias la='ls -Ah'
+alias ll='ls -lh'
+
+alias grepc='grep --color=always'
+
+alias b='cd ..'
+alias rm='rm -i'
+alias tree='tree -Ch'
+
+# git aliases
+alias gitb='git branch'
+alias gits='git status -sb'
+alias gitsno='git status -sbu no'
+
+# Create an alias file for eshell
+mkdir -p $HOME/.eshell
+# http://www.emacswiki.org/emacs/EshellAlias
+alias | sed -E "s/^alias ([^=]+)='(.*)'$/alias \1 \2 \$*/g; s/'\\\''/'/g;" > $HOME/.eshell/alias

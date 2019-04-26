@@ -1,0 +1,39 @@
+#!/bin/bash
+
+set -x
+
+APP="emacs@$(uname -n)"
+FILE="/tmp/guake_like-"$APP
+HIDE=
+
+# for now dont worry about toggling,
+# just show the window and stick to it
+wmctrl -a $APP
+exit
+
+# # read/write toggled value in a tmp file
+# if [ -f $FILE ]; then
+#     HIDE=`cat $FILE`
+# else
+#     HIDE=0			# default is to show first time
+#     touch $FILE
+# fi
+
+# # now toggle
+# if [ "$HIDE" == "1" ]
+# then
+#     HIDE=0
+#     # wmctrl -a $APP
+#     # wmctrl -r $APP -b add,fullscreen # this helps in hiding tabs in gnome-terminal
+#     wmctrl -r $APP -b remove,shaded
+#     wmctrl -r $APP -b remove,above
+
+# else
+#     HIDE=1
+#     # gnome-terminal --working-directory="/home/kgaipal/Workspace/dev-bomgar/"
+#     #wmctrl -r $APP -b add,skip_taskbar
+#     wmctrl -r $APP -b add,shadded
+#     wmctrl -r $APP -b add,above
+# fi
+
+# echo $HIDE > $FILE

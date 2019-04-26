@@ -1,0 +1,4 @@
+# emacs and cscope integration
+
+app-editors/emacs gconf gnutls gsettings gzip-el xft libxml2 gfile
+dev-util/cscope emacs

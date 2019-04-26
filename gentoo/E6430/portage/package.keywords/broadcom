@@ -1,0 +1,5 @@
+# required by net-wireless/broadcom-sta (argument)
+#=net-wireless/broadcom-sta-6.30.223.271-r4 ~amd64
+
+# required by sys-firmware/b43-firmware (argument)
+=sys-firmware/b43-firmware-5.100.138 ~amd64

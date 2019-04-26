@@ -1,0 +1,7 @@
+# required by app-emulation/virtualbox-4.3.28::gentoo[extensions]
+# required by @selected
+# required by @world (argument)
+>=app-emulation/virtualbox-extpack-oracle-4.3.28.100309 PUEL
+
+# required by adobe-flash (argument)
+>=www-plugins/adobe-flash-11.2.202.460 AdobeFlash-11.x
