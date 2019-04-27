@@ -14,18 +14,13 @@
 # <fs>			<mountpoint>	<type>		<opts>		<dump/pass>
 
 
-#/dev/sda1: home
-UUID=7461bebe-201f-4add-9783-81b6f8dbf350	/	ext4	errors=remount-ro,noatime		0	1
-
-# swap /swapfile: UUID="808cd92d-9737-4434-a04f-b660ae59bc02" TYPE="swap"
-/swapfile					none	swap	sw					0	0
-/home/bigswapfile				none	swap	sw					0	0
-
-#/dev/sda6: home
-UUID=f4fb20b7-eb70-48f5-b221-425426c2d937	/home	ext4	defaults,user_xattr			0	2
+UUID=e3091697-0f9c-4f77-9dd2-a879ed9c18da	/	ext4	errors=remount-ro,noatime	0	1
+/swapfile					none	swap	sw				0	0
+UUID=f4fb20b7-eb70-48f5-b221-425426c2d937	/home	ext4	defaults,user_xattr		0	2
+/home/bigswapfile				none	swap	sw				0	0
 
 # tmpfs for faster portage compilation [http://wiki.gentoo.org/wiki/Portage_TMPDIR_on_tmpfs]
-tmpfs	/var/portage/tmpfs	tmpfs	uid=portage,gid=portage,mode=0775,size=4G,noatime		0	0
+tmpfs	/var/portage/tmpfs	tmpfs	uid=portage,gid=portage,mode=0775,size=4G,noatime	0	0
 
 #external_disk
 #UUID=22b5eea1-5c49-433e-8ff2-515d245cda17	/media/external_disk	ext4	defaults,user_xattr	0	2

@@ -1,6 +1,7 @@
 app-admin/eclean-kernel
 app-admin/emacs-updater
 app-admin/sudo
+app-admin/testdisk
 app-arch/file-roller
 app-arch/lzop
 app-arch/unrar
@@ -31,14 +32,12 @@ dev-vcs/git-flow
 dev-vcs/subversion
 gnome-base/gdm
 gnome-extra/chrome-gnome-shell
-gnome-extra/gnome-boxes
 gnome-extra/gnome-tweak-tool
 gnome-extra/gnome-user-share
 media-fonts/lohit-fonts
 media-gfx/eog
 media-gfx/evoluspencil
 media-gfx/gnome-screenshot
-media-gfx/inkscape
 media-video/totem
 net-p2p/transmission
 sys-apps/dmidecode
@@ -46,6 +45,7 @@ sys-apps/dog
 sys-apps/gnome-disk-utility
 sys-apps/mlocate
 sys-apps/pciutils
+sys-apps/pcmciautils
 sys-apps/ripgrep
 sys-apps/usbutils
 sys-block/gparted
@@ -53,10 +53,10 @@ sys-boot/grub
 sys-devel/clang
 sys-devel/gdb
 sys-firmware/b43-firmware
+sys-fs/extundelete
 sys-fs/simple-mtpfs
 sys-kernel/genkernel-next
 sys-kernel/gentoo-sources
-sys-kernel/gentoo-sources:4.14.83
 sys-kernel/linux-firmware
 sys-power/cpupower
 sys-power/ncpufreqd

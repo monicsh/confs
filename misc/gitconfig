@@ -50,4 +50,4 @@
 # git config --global core.fscache true        # default since v2.8
 # git config --global gc.auto 256
 [winUpdater]
-	recentlySeenVersion = 2.21.0.windows.1
+	recentlySeenVersion = 2.20.0.windows.1
