@@ -1,6 +1,5 @@
 [user]
 	name = Kshitij Gaipal
-	email = ksgaipal@microsoft.com
 [core]
 	# editor = emacsclient
 	excludesfile = ~/.gitignore_global
@@ -32,8 +31,6 @@
 [credential]
 	modalPrompt = false
 	writeLog = false
-[credential "https://kgaipal.visualstudio.com/"]
-	helper = store
 [credential "microsoft.visualstudio.com"]
 	helper = manager
 	interactive = never
@@ -49,5 +46,3 @@
 # git config --global core.preloadindex true   # default since v2.1
 # git config --global core.fscache true        # default since v2.8
 # git config --global gc.auto 256
-[winUpdater]
-	recentlySeenVersion = 2.20.0.windows.1
