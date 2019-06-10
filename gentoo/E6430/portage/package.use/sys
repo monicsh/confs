@@ -12,3 +12,8 @@ sys-devel/gcc fortran graphite
 # required by sys-devel/clang-3.5.0-r100::gentoo
 # required by sys-devel/clang (argument)
 sys-devel/llvm gold
+
+# USE="context python tools" for log-device
+# https://logdevice.io/docs/Installation.html
+dev-libs/boost context python tools
+dev-util/boost-build python

@@ -11,6 +11,7 @@ app-editors/emacs
 app-editors/nano
 app-portage/cpuid2cpuflags
 app-portage/eix
+app-portage/elicense
 app-portage/flaggie
 app-portage/genlop
 app-portage/gentoolkit
@@ -19,6 +20,7 @@ app-text/pdfshuffler
 app-text/tree
 dev-lang/go
 dev-lang/mono
+dev-libs/jemalloc
 dev-perl/rename
 dev-python/pexpect
 dev-python/pip
@@ -32,7 +34,7 @@ dev-vcs/git-flow
 dev-vcs/subversion
 gnome-base/gdm
 gnome-extra/chrome-gnome-shell
-gnome-extra/gnome-tweak-tool
+gnome-extra/gnome-tweaks
 gnome-extra/gnome-user-share
 media-fonts/lohit-fonts
 media-gfx/eog
@@ -58,6 +60,7 @@ sys-fs/simple-mtpfs
 sys-kernel/genkernel-next
 sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
+sys-libs/libunwind
 sys-power/cpupower
 sys-power/ncpufreqd
 sys-process/lsof
