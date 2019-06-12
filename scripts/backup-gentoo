@@ -21,21 +21,24 @@ function validate
 
 function backup
 {
-    echo -n "Backup dir '$BACKUP_DIR'... "
+    echo "Backing-up in '$BACKUP_DIR'... "
     mkdir -p $BACKUP_DIR/{portage,kernel,etc}
 
     # etc
+    echo "...etc"
     cp -arp /etc/default/grub ${BACKUP_DIR}/etc/
     cp -arp /etc/fstab ${BACKUP_DIR}/etc/
     cp -arp /etc/systemd/journald.conf ${BACKUP_DIR}/etc/
 
     # portage
+    echo "...portage"
     cp -arp /etc/portage/package.* ${BACKUP_DIR}portage/
     cp -arp /etc/portage/env ${BACKUP_DIR}portage/
     cp -arp /etc/portage/*.conf ${BACKUP_DIR}portage/
     cp -arp /var/lib/portage/world ${BACKUP_DIR}portage/
 
     # kernel
+    echo "...kernel"
     zcat /proc/config.gz > ${BACKUP_DIR}kernel/kernel-$(uname -r).config
 
     echo "done"
