@@ -1,0 +1,2 @@
+# default version treats every warning as error
+dev-libs/zookeeper-c cflags-disable-warning-as-error-for-format-overflow

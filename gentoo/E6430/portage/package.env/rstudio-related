@@ -1,2 +1,5 @@
+# fails to compile if not enabled docs in IDE
 dev-lang/R enable-doc
+
+# too much for RAM
 dev-lang/ghc no-tmpfs

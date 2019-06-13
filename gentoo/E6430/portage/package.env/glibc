@@ -1,4 +1,3 @@
 # valgrind refuses to run if no strlen symbols
 # https://bugs.gentoo.org/show_bug.cgi?id=390323#c12
 sys-libs/glibc disable-strip
-

@@ -4,7 +4,9 @@ app-admin/sudo
 app-admin/testdisk
 app-arch/file-roller
 app-arch/lzop
+app-arch/snappy
 app-arch/unrar
+app-arch/zstd
 app-cdr/brasero
 app-crypt/seahorse
 app-editors/emacs
@@ -18,9 +20,16 @@ app-portage/gentoolkit
 app-portage/portpeek
 app-text/pdfshuffler
 app-text/tree
+dev-cpp/gflags
+dev-cpp/glog
+dev-cpp/sparsehash
+dev-cpp/tbb
 dev-lang/go
 dev-lang/mono
+dev-libs/double-conversion
 dev-libs/jemalloc
+dev-libs/libsodium
+dev-libs/zookeeper-c
 dev-perl/rename
 dev-python/pexpect
 dev-python/pip

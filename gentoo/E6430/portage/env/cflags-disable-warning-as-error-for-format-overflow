@@ -1,0 +1,2 @@
+CFLAGS="${CFLAGS} -Wno-error=format-overflow"
+CXXFLAGS="${CXXFLAGS} -Wno-error=format-overflow"

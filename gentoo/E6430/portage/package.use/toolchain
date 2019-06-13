@@ -1,0 +1,7 @@
+# USE="graphite" for more optimizations
+# USE="fortran" required for dependency on rstudio IDE
+sys-devel/gcc graphite
+
+# required by sys-devel/clang-3.5.0-r100::gentoo
+# required by sys-devel/clang (argument)
+sys-devel/llvm gold

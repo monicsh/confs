@@ -8,25 +8,3 @@ app-editors/emacs gconf gsettings gzip-el libxml2 xft
 # emacs support in other packages
 dev-util/cscope emacs
 dev-vcs/git emacs tk
-
-
-# * Your version of GTK+ will have problems with closing open
-# * displays. This is no problem if you just use one display, but
-# * if you use more than one and close one of them Emacs may crash.
-# * See <https://bugzilla.gnome.org/show_bug.cgi?id=85715>.
-# * If you intend to use more than one display, then it is strongly
-# * recommended that you compile Emacs with the Athena/Lucid or the
-# * Motif toolkit instead.
-# * You can set the version to be started by /usr/bin/emacs through the
-# * Emacs eselect module, which also redirects man and info pages.
-# * Therefore, several Emacs versions can be installed at the same time.
-# * "man emacs.eselect" for details.
-# * 
-# * If you upgrade from Emacs version 24.2 or earlier, then it is
-# * strongly recommended that you use app-admin/emacs-updater to rebuild
-# * all byte-compiled elisp files of the installed Emacs packages.
-# * 
-# * (Note: Above message is only printed the first time package is
-# * installed. Please look at /usr/share/doc/emacs-25.2_rc1/README.gentoo*
-# * for future reference)
-

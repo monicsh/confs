@@ -1,0 +1,4 @@
+# for installation of LogDevice
+# https://logdevice.io/docs/Installation.html
+
+=dev-libs/zookeeper-c-3.4.10 ~amd64

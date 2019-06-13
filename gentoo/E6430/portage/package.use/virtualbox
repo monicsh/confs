@@ -3,6 +3,7 @@
 # vnc client and all machines show in tabs
 # USE="extensions" required for USB 3.0 support in a VM
 >=app-emulation/virtualbox-5.0 -sdk vboxwebsrv vnc
+
 # * Starting with version 4.0.0, virtualbox has USB-1 support.
  # * For USB-2 support, PXE-boot ability and VRDP support please emerge
  # *   app-emulation/virtualbox-extpack-oracle
