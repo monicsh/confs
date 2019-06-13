@@ -44,6 +44,17 @@ function backup
     echo "done"
 }
 
+function launch_meld
+{
+    git_repo=$0/../../gentoo/$1/
+
+    if [[ ! -d $BACKUP_DIR ]]; then
+        return 0
+    fi
+
+    meld $BACKUP_DIR $git_repo
+}
+
 validate $*
 if [ $? -ne 0 ]; then
     usage
@@ -51,3 +62,4 @@ if [ $? -ne 0 ]; then
 fi
 
 backup
+launch_meld E6430
