@@ -1,0 +1,6 @@
+# various filesystems support which will be used most often
+#sys-block/gparted fat hfs ntfs
+sys-apps/gnome-disk-utility fat
+
+# when gnome-disk-utility fails this always works
+sys-block/gparted fat hfs ntfs

@@ -1,14 +1,11 @@
-
-# required by www-client/firefox-45.2.0::gentoo[system-libvpx]
-# required by @selected
-# required by @world (argument)
->=media-libs/libvpx-1.5.0 postproc
-
 # USE="system-*" to prefer system defined libs over firefox's
-www-client/firefox system-harfbuzz system-icu system-jpeg system-libevent system-libvpx
+www-client/firefox system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 
 # USE="wifi" for wifi detection
 www-client/firefox wifi
 
 # USE="clang" for trying different compiler
 www-client/firefox clang
+
+# required by www-client/firefox-60.7.0::gentoo[system-sqlite]
+>=dev-db/sqlite-3.28.0 secure-delete

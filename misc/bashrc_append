@@ -12,7 +12,10 @@ PLATFORM=$(cat /proc/version | cut -d ' ' -f1)
 
 if [[ "$PLATFORM" =~ ^MINGW* ]]; then
     export PATH=$HOME/.local/bin:/c/Program\ Files/Git/bin:$PATH
+else
+    export PATH=$HOME/.local/bin:$PATH
 fi
+
 
 # change prompt
 PS1="[$GREY\W$NORMAL]\$ "

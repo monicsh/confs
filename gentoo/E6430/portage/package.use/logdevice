@@ -1,0 +1,6 @@
+# for installation of LogDevice
+# https://logdevice.io/docs/Installation.html
+
+dev-cpp/glog unwind gflags
+dev-libs/boost context python tools
+dev-util/boost-build python

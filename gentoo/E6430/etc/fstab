@@ -13,7 +13,6 @@
 
 # <fs>			<mountpoint>	<type>		<opts>		<dump/pass>
 
-
 UUID=e3091697-0f9c-4f77-9dd2-a879ed9c18da	/	ext4	errors=remount-ro,noatime	0	1
 /swapfile					none	swap	sw				0	0
 UUID=f4fb20b7-eb70-48f5-b221-425426c2d937	/home	ext4	defaults,user_xattr		0	2
