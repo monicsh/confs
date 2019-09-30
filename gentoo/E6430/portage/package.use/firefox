@@ -9,3 +9,8 @@ www-client/firefox clang
 
 # required by www-client/firefox-60.7.0::gentoo[system-sqlite]
 >=dev-db/sqlite-3.28.0 secure-delete
+
+# required by www-client/firefox-60.8.0::gentoo[system-libvpx]
+# required by @__auto_slot_operator_replace_installed__ (argument)
+>=media-libs/libvpx-1.7.0 postproc
+

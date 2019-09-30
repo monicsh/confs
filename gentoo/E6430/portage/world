@@ -11,12 +11,15 @@ app-cdr/brasero
 app-crypt/seahorse
 app-editors/emacs
 app-editors/nano
+app-emulation/virtualbox-bin
+app-emulation/virtualbox-guest-additions
 app-portage/cpuid2cpuflags
 app-portage/eix
 app-portage/elicense
 app-portage/flaggie
 app-portage/genlop
 app-portage/gentoolkit
+app-portage/mirrorselect
 app-portage/portpeek
 app-text/pdfshuffler
 app-text/tree
@@ -50,6 +53,10 @@ media-gfx/eog
 media-gfx/evoluspencil
 media-gfx/gnome-screenshot
 media-video/totem
+net-analyzer/nmap
+net-analyzer/tcpdump
+net-analyzer/traceroute
+net-analyzer/wireshark
 net-p2p/transmission
 sys-apps/dmidecode
 sys-apps/dog

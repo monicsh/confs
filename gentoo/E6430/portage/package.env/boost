@@ -1,0 +1,2 @@
+# USE="disable-multilib-strict" for not forcing FEATURES="multilib-strict"
+dev-libs/boost disable-multilib-strict
