@@ -29,15 +29,8 @@
 	follow = true
 	decorate = true
 [credential]
-	modalPrompt = false
 	writeLog = false
-[credential "microsoft.visualstudio.com"]
 	helper = manager
-	interactive = never
-	authority = AAD
-	validate = false
-[credential "https://github.com/"]
-	helper = store
 [gc]
 	auto = 256
 
