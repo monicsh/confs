@@ -9,7 +9,10 @@ MKDIR "%USERPROFILE%/.local/bin"
 
 :: clone github's confs.git and make links to essential scripts from it
 :: github's public repo is always read-only without credentials so clone will work without problems!
-%COMSPEC% /C "git clone https://github.com/kgaipal/confs.git "%USERPROFILE%/code/confs""
+%COMSPEC% /C "git clone https://github.com/monicsh/confs.git "%USERPROFILE%/code/confs""
+
+:: setup the home dir to windows profile/home dir. this needs to run after msys64 installation
+MKLINK "C:/msys64/home/ksgaipal" /D "%USERPROFILE%"
 
 :: Note: to make soft links, use MKLINK instead of bash's ln otherwise
 :: git-bash will copy target file to the link location instead [git bug #???]
@@ -24,6 +27,12 @@ PUSHD
 CHDIR "%USERPROFILE%/code/confs/misc"
 COPY "exclude-patterns.sample" "%USERPROFILE%/code/exclude-patterns.txt"
 POPD
+
+:: clone github's emacs.git and setup emacs
+%COMSPEC% /C "git clone https://github.com/monicsh/emacs.git "%USERPROFILE%/code/emacs""
+
+:: setup emacs.d link for emacs setup
+MKLINK "%USERPROFILE%/.emacs.d" /D "%USERPROFILE%/code/emacs/lisp"
 
 :: remove unwanted programs which came with vanilla installation
 %COMSPEC% /C "powershell -ExecutionPolicy ByPass -File %USERPROFILE%/code/confs/scripts/windows10-remove-default-pacakges.ps1"
