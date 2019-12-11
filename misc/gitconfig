@@ -1,5 +1,6 @@
 [user]
 	name = Kshitij Gaipal
+        email = ksgaipal@microsoft.com
 [core]
 	# editor = emacsclient
 	excludesfile = ~/.gitignore_global
