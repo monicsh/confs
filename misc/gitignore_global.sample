@@ -1,16 +1,21 @@
 #!/bin/false
 
+# exact file names
+.dumbjump
+.emacs*
+.idea
+.ignore
 .leu
 .refsignored
-.emacs*
-.dumbjump
-.ignore
-*.dat
-.idea
-lisp/ido.last
+App.config
+AssemblyInfo.cs
+AssemblyMetadata.cs
 Local.[0-9]Node.xml
+OSSApprovals.xml
+Reference.cs
+lisp/ido.last
 
-# project specific
+# extensions
 *.Designer.cs
 *.FxCop
 *.XML
@@ -24,6 +29,7 @@ Local.[0-9]Node.xml
 *.css
 *.csv
 *.d.ts
+*.dat
 *.dgml
 *.dll*
 *.idl
@@ -64,13 +70,6 @@ Local.[0-9]Node.xml
 *.yaml
 *.yml
 *[tT]est*
-
-# exact file names
-# App.config
-AssemblyMetadata.cs
-AssemblyInfo.cs
-OSSApprovals.xml
-Reference.cs
 
 # directories
 /Backup*
