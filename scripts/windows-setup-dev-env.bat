@@ -28,7 +28,7 @@ MKLINK "%USERPROFILE%/.local/bin/vs-make" "%USERPROFILE%/code/confs/scripts/vs-m
 MKLINK "%USERPROFILE%/.gitconfig" "%USERPROFILE%/code/confs/misc/gitconfig"
 PUSHD
 CHDIR "%USERPROFILE%/code/confs/misc"
-COPY "exclude-patterns.sample" "%USERPROFILE%/code/exclude-patterns.txt"
+COPY "gitignore_global.sample" "%USERPROFILE%/..gitignore_global"
 POPD
 
 :: clone github's emacs.git and setup emacs
