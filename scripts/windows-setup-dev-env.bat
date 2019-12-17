@@ -26,10 +26,7 @@ MKLINK "%USERPROFILE%/.local/bin/findk" "%USERPROFILE%/code/confs/scripts/findk"
 MKLINK "%USERPROFILE%/.local/bin/util.inc" "%USERPROFILE%/code/confs/scripts/util.inc"
 MKLINK "%USERPROFILE%/.local/bin/vs-make" "%USERPROFILE%/code/confs/scripts/vs-make.bat"
 MKLINK "%USERPROFILE%/.gitconfig" "%USERPROFILE%/code/confs/misc/gitconfig"
-PUSHD
-CHDIR "%USERPROFILE%/code/confs/misc"
-COPY "gitignore_global.sample" "%USERPROFILE%/..gitignore_global"
-POPD
+MKLINK "%USERPROFILE%/.gitignore_global" "%USERPROFILE%/code/confs/misc/gitignore_global"
 
 :: clone github's emacs.git and setup emacs
 %COMSPEC% /C "git clone https://github.com/monicsh/emacs.git "%USERPROFILE%/code/emacs""
