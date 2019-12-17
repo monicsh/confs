@@ -14,7 +14,7 @@ fi
 
 . $(dirname $0)/util.inc
 
-PATTERN_EXCLUDE_FILE=$HOME/.ignore
+PATTERN_EXCLUDE_FILE=$HOME/.gitignore_global
 EXCLUDED_FILE_ARGS=$(parse_folder_names \
                          "-path ./" \
                          $PATTERN_EXCLUDE_FILE \
