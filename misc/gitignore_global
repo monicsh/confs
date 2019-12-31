@@ -1,5 +1,3 @@
-#!/bin/false
-
 # exact file names
 .dumbjump
 .emacs*
@@ -57,7 +55,7 @@ lisp/ido.last
 *.tm4
 *.tom
 *.ts
-*.tt*
+# *.tt*
 *.txt
 *.vbs
 *.vcxproj
